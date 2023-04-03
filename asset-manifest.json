@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/redux-news/static/js/main.8c909e61.js",
+    "index.html": "/redux-news/index.html",
+    "main.8c909e61.js.map": "/redux-news/static/js/main.8c909e61.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.8c909e61.js"
+  ]
+}
