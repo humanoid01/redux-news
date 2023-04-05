@@ -1,5 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { Article } from '../../types/types';
+// I know it should be hidden in .env, but I do't care about this one
 const apiKey = '75b588f7407b4970affa7b81304b037e';
 interface Response {
   status: string;
