@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { Article } from '../../types/types';
-
+const apiKey = '75b588f7407b4970affa7b81304b037e';
 interface Response {
   status: string;
   totalResults: number;
@@ -28,17 +28,13 @@ export const newsApi = createApi({
       query: ({ country, query, pageSize, page }) =>
         `top-headlines?country=${
           country ? country : encodeURIComponent('us')
-        }&q=${query}&pageSize=${pageSize}&page=${page}&apiKey=${
-          process.env.REACT_APP_NEWS_API_KEY
-        }`,
+        }&q=${query}&pageSize=${pageSize}&page=${page}&apiKey=${apiKey}`,
     }),
     getEverything: builder.query<Response, GetEverythingArgs>({
       query: ({ query, page, pageSize }) =>
         `everything?language=en&q=${
           query ? query : encodeURIComponent("''")
-        }&pageSize=${pageSize}&page=${page}&apiKey=${
-          process.env.REACT_APP_NEWS_API_KEY
-        }`,
+        }&pageSize=${pageSize}&page=${page}&apiKey=${apiKey}`,
     }),
   }),
 });
